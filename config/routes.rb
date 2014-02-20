@@ -1,6 +1,9 @@
 Primenumbers::Application.routes.draw do
   resources :primes
 
+  match '/check', :controller=>'primes', :action=>'checkprime'
+  match '/validate', :controller=>'primes', :action=>'isprime'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -80,4 +80,12 @@ class PrimesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def isprime
+    @input1 = params[:search_string] 
+    @p1 = Checkprime.new(@input1.to_i) 
+    @result = @p1.checkprime
+  end
+
+
 end
